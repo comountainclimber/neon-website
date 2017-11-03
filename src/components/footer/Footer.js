@@ -28,7 +28,7 @@ const Footer = () => (
     </div>
     <div id="social">
       <div id="description">Join us at City of Zion!</div>
-      <div id="address" style={{ opacity: 0 }}>
+      <div id="placeholder" style={{ opacity: 0 }}>
         Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A
       </div>
       <div id="social-links">
