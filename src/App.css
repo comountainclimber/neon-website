@@ -1,3 +1,7 @@
+html {
+  background-color: #1e1e3f;
+}
+
 .App nav {
   position: fixed;
   width: 100%;
@@ -18,6 +22,9 @@
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   flex-direction: row;
+  max-width: 1750px;
+  /* background: blue; */
+  margin: auto;
 }
 
 .landing-page-container h1 {
@@ -120,6 +127,7 @@ footer #donation #modal-link {
 }
 
 footer #donation #address {
+  font-family: monospace;
   margin-top: 15px;
   color: white;
   font-weight: 200;
