@@ -170,11 +170,17 @@ footer #social-links img {
   justify-content: center;
   align-items: center;
   border: solid thin #4492fd;
-  border-radius: 2px;
+  border-radius: 3px;
   color: white;
   background-color: #313263;
   height: 40px;
   width: 150px;
+}
+
+#download-button:hover {
+  transition: all 200ms ease-in;
+  border: solid thin #313263;
+  background-color: #4492fd;
 }
 
 #download-button img {
