@@ -5,11 +5,11 @@ import windowsIcon from "./images/windows-logo.png";
 export const downloadOptions = [
   {
     id: "MAC_OSX",
-    display: "OSX",
+    display: "Mac OSX",
     href:
       "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.5/Mac.Neon-0.0.5.dmg",
     icon: appleIcon,
-    size: "134.56mb"
+    size: "134.56mb (Neon.dmg)"
   },
   {
     id: "WINDOWS",
@@ -17,14 +17,22 @@ export const downloadOptions = [
     href:
       "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.5/Windows.Neon.Setup.0.0.5.exe",
     icon: windowsIcon,
-    size: "134.56mb"
+    size: "134.56mb (Neon.exe)"
   },
   {
     id: "LINUX",
     display: "Linux",
     href:
+      "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.4/Linux.Neon_0.0.4_amd64.deb",
+    icon: linuxIcon,
+    size: "134.56mb (Neon.deb)"
+  },
+  {
+    id: "LINUX2",
+    display: "Linux",
+    href:
       "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.5/Linux.Neon-0.0.5-x86_64.AppImage",
     icon: linuxIcon,
-    size: "134.56mb"
+    size: "134.56mb (Neon.appimage)"
   }
 ];

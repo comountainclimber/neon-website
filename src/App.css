@@ -3,7 +3,8 @@ html {
 }
 
 .App nav {
-  position: fixed;
+  position: absolute;
+  padding-top: 15px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -15,14 +16,45 @@ html {
   cursor: pointer;
 }
 
+#modal {
+  text-align: center;
+}
+
+#modal #qr-label {
+  background-color: #4597ff;
+  /* text-align: center; */
+  height: 60px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: lighter;
+  margin-top: -21px;
+  margin-left: -20px;
+  display: flex;
+  margin-right: -20px;
+  justify-content: center;
+  padding-left: 20px;
+  align-items: center;
+  font-size: 20px;
+  /* clip-path: polygon(0 0, 100% 0, 50% 0, 50% 100%); */
+  /*clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);*/
+}
+#modal #down-arrow {
+  width: 0;
+  margin: auto;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-top: 30px solid #4597ff;
+}
+
 .landing-page-container {
   display: flex;
-  background-image: url("./images/page-bg.jpg");
-  height: 95vh;
+  background-image: url("./images/Background.png");
+  min-height: 95vh;
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   flex-direction: row;
-  max-width: 1750px;
+  max-width: 1920px;
   /* background: blue; */
   margin: auto;
 }
@@ -47,6 +79,8 @@ html {
 
 .landing-page-container #details {
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
   justify-content: center;
   /*align-items: center;*/
   flex-direction: column;
@@ -75,10 +109,57 @@ html {
 }
 
 .landing-page-container #download-options-container {
-  margin-top: 75px;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.landing-page-container #screen-shot-container {
+  background-size: contain;
+  background-image: url("./images/screenshot.png");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  background-position: calc(50%) 50%;
+  display: flex;
+}
+
+.landing-page-container #screen-shot {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex: 0.5;
+}
+
+.landing-page-container #screen-shot #image {
+  height: 100%;
+  width: 100%;
+
+  /*object-fit: contain;*/
+  /* display: flex; */
+  /*max-width: 100%;*/
+}
+
+#download-button {
+  /*justify-self: center;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid thin #4492fd;
+  border-radius: 3px;
+  color: white;
+  /*background-color: #313263;*/
+  background-color: rgba(49, 50, 99, 0);
+  height: 40px;
+  width: 200px;
+}
+
+#download-options-container #option {
+  padding: 5px;
 }
 
 #download-options-container img {
@@ -95,24 +176,36 @@ html {
   margin-bottom: 15px;
 }
 
-.landing-page-container #screen-shot {
-  justify-content: flex-end;
-  align-items: center;
-  display: flex;
-  flex: 0.5;
+#download-button:hover {
+  transition: all 200ms ease-in;
+  border: solid thin #313263;
+  background-color: #4492fd;
+}
+
+#download-button img {
+  color: white;
+  margin-left: 15px;
+}
+
+#option > a {
+  text-decoration: none;
 }
 
 footer {
   font-weight: 100;
   color: white;
-  height: 100px;
   font-size: 14px;
+  background-color: #12112d;
+  border-top: solid #4492fd;
+}
+
+footer #footer-content {
+  min-height: 100px;
+  max-width: 1920px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #12112d;
-  border-top: solid #4492fd;
 }
 
 footer #donation {
@@ -173,29 +266,120 @@ footer #social-links img {
   margin-left: 5px;
 }
 
-#download-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid thin #4492fd;
-  border-radius: 3px;
-  color: white;
-  background-color: #313263;
-  height: 40px;
-  width: 150px;
+/*#download-button:last-child {
+  margin: auto;
+}*/
+
+@media (max-width: 768px) {
+  .landing-page-container #download-options-container {
+    display: none;
+  }
+  .landing-page-container #screen-shot-container {
+    display: none;
+  }
+  .landing-page-container #screen-shot {
+    background-size: contain;
+    background-image: url("./images/screenshot.png");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    background-position: calc(50%) 50%;
+    display: flex;
+    flex: 1;
+  }
+  .landing-page-container #details {
+    padding-bottom: 0;
+  }
+
+  .landing-page-container > #details-container {
+    flex: 0.3;
+  }
+  .landing-page-container #description {
+    font-size: 22px;
+  }
+  .landing-page-container h1 {
+    font-size: 75px;
+  }
+  .landing-page-container {
+    /*display: flex;
+  background-image: url("./images/Background.png");
+  height: 95vh;
+  background-size: cover;
+  font-family: "Source Sans Pro", sans-serif;*/
+    flex-direction: column;
+    /*max-width: 1920px;*/
+    /* background: blue; */
+    /*margin: auto;*/
+  }
+  footer #footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*padding-bottom: 20px;*/
+  }
+  footer #donation {
+    padding: 20px;
+    text-align: center;
+  }
+  footer #modal-link {
+    justify-content: center;
+  }
+  footer #placeholder {
+    display: none;
+  }
+  footer #social {
+    padding: 20px;
+    /*display: none;*/
+  }
+  footer #social #description {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 }
 
-#download-button:hover {
-  transition: all 200ms ease-in;
-  border: solid thin #313263;
-  background-color: #4492fd;
+@media (max-width: 450px) {
+  .landing-page-container {
+    text-align: center;
+  }
+  .landing-page-container h1 {
+    align-self: center;
+    padding-top: 20px;
+  }
+  .landing-page-container #screen-shot {
+    width: 150%;
+  }
+  .App nav {
+    justify-content: center;
+  }
 }
 
-#download-button img {
-  color: white;
-  margin-left: 15px;
+@media (max-width: 1080px) {
+  #download-button {
+    width: 150px;
+  }
+  #download-options-container #size {
+    font-size: 12px;
+  }
 }
 
-#option > a {
-  text-decoration: none;
+@media (max-width: 1080px) {
+  footer #donation #address {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .landing-page-container #screen-shot-container {
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+    background-position: calc(0%) 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  #modal img {
+    width: 250px;
+  }
 }
