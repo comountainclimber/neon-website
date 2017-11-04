@@ -50,6 +50,7 @@ const QRModal = ({ handleModalClose, modalId }) => (
         alignItems: "center"
       },
       content: {
+        position: "relative",
         marginLeft: "auto",
         marginRight: "auto",
         left: "auto",

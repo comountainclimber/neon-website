@@ -75,6 +75,7 @@ html {
   /*align-items: center;*/
   flex-direction: row;
   flex: 0.5;
+  padding-left: 20px;
 }
 
 .landing-page-container #details {
@@ -120,8 +121,8 @@ html {
 .landing-page-container #screen-shot-container {
   background-size: contain;
   background-image: url("./images/screenshot.png");
-  height: 100%;
-  width: 100%;
+  width: 60vw;
+  height: 60vh;
   background-repeat: no-repeat;
   display: -ms-flexbox;
   background-position: calc(50%) 50%;
@@ -376,8 +377,8 @@ footer #social-links img {
 @media (max-width: 1400px) {
   .landing-page-container #screen-shot-container {
     background-size: cover;
-    height: 70%;
-    width: 100%;
+    width: 75vw;
+    height: 75vh;
     background-position: calc(0%) 50%;
   }
 }
