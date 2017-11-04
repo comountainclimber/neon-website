@@ -345,9 +345,13 @@ footer #social-links img {
   .landing-page-container h1 {
     align-self: center;
     padding-top: 20px;
+    font-size: 65px;
+  }
+  .landing-page-container #description {
+    font-size: 20px;
   }
   .landing-page-container #screen-shot {
-    width: 150%;
+    margin-top: -50px;
   }
   .App nav {
     justify-content: center;
