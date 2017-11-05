@@ -17,6 +17,7 @@ html {
 }
 
 #modal {
+  font-weight: bolder;
   text-align: center;
 }
 
@@ -287,6 +288,10 @@ footer #social-links img {
   margin-left: 5px;
 }
 
+footer #social #description {
+  font-weight: 400;
+}
+
 @media (max-width: 1440px) {
   .landing-page-container {
     flex-shrink: 0;
@@ -443,6 +448,7 @@ footer #social-links img {
     margin-bottom: 5px;
   }
   footer #donation #address {
+    justify-content: center;
     display: flex;
   }
 }
@@ -509,6 +515,9 @@ footer #social-links img {
 }
 
 @media (max-width: 450px) {
+  /*.landing-page-container > #details-container {
+    padding: 5px;
+  }*/
   .landing-page-container {
     text-align: center;
   }
@@ -522,10 +531,22 @@ footer #social-links img {
     padding-top: 20px;
     font-size: 65px;
   }
+  .landing-page-container #download-button {
+    width: 125px;
+  }
   .landing-page-container #download-options-container {
+    justify-content: space-around;
     margin-top: 20px;
-    justify-content: center;
-    flex-flow: column;
+    /*justify-content: center;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /*flex-flow: column;*/
+  }
+  #download-options-container #size {
+    font-size: 10px;
+
+    /*flex-flow: column;*/
   }
   .landing-page-container #description {
     font-size: 20px;
@@ -549,6 +570,14 @@ footer #social-links img {
   footer #social-links img {
     margin-left: 10px;
   }
+
+  footer #address {
+    font-size: 12px;
+  }
+
+  /*footer #social #description {
+    font-size: 17px;
+  }*/
 
   footer #social {
     border-top: solid thin rgba(230, 236, 242, 0.2);

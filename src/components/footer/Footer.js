@@ -9,7 +9,7 @@ const Footer = ({ handleModalClick }) => (
   <footer>
     <div id="footer-content">
       <div id="donation">
-        Donate to City of Zion
+        <div id="description">Donate to City of Zion</div>
         <div id="address">AXSoNQEKjmqPBNPg5cNrHyWivfjok3Vj9D</div>
         <div id="modal-link">
           <a
@@ -23,7 +23,7 @@ const Footer = ({ handleModalClick }) => (
         </div>
       </div>
       <div id="donation">
-        Donate to NEON wallet creators
+        <div id="description">Donate to NEON wallet creators</div>
         <div id="address">Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A</div>
         <div id="modal-link">
           <a
