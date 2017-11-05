@@ -169,7 +169,7 @@ html {
   background-color: #313164;
   height: 40px;
   width: 140px;
-  box-shadow: 0 4px 10px rgba(49, 49, 100, 1);
+  box-shadow: 0 4px 10px #181847;
 }
 
 #download-options-container #option {
@@ -218,10 +218,15 @@ footer {
 footer #footer-content {
   padding: 10px;
   min-height: 100px;
-  max-width: 1920px;
+  max-width: 1280px;
+  margin: auto;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -280,6 +285,10 @@ footer #social-links img {
 }
 
 @media (max-width: 1440px) {
+  .landing-page-container {
+    flex-shrink: 0;
+    flex-direction: row;
+  }
   .landing-page-container #screen-shot-container {
     background-size: cover;
     width: 55vw;
@@ -332,7 +341,7 @@ footer #social-links img {
   .landing-page-container #screen-shot {
     background-size: contain;
     background-image: url("./images/screenshot.png");
-    max-height: 400px;
+    max-height: 300px;
     /*width: 100%;*/
     background-repeat: no-repeat;
     display: -ms-flexbox;
@@ -373,8 +382,8 @@ footer #social-links img {
     flex-direction: column;
   }
   .landing-page-container #download-options-container {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     flex-wrap: nowrap;
   }
   #download-options-container #option {
@@ -395,11 +404,15 @@ footer #social-links img {
 }
 
 @media (max-width: 768px) {
+  .landing-page-container {
+    height: auto;
+  }
   .landing-page-container #details {
     justify-content: center;
   }
   .landing-page-container #download-options-container {
-    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   #download-options-container #option {
     padding: 5px;
@@ -489,11 +502,16 @@ footer #social-links img {
     padding-top: 20px;
     font-size: 65px;
   }
+  .landing-page-container #download-options-container {
+    margin-top: 20px;
+    justify-content: center;
+    flex-flow: column;
+  }
   .landing-page-container #description {
     font-size: 20px;
   }
   .landing-page-container #screen-shot {
-    margin-top: -50px;
+    padding-bottom: 20px;
   }
   .App nav {
     justify-content: center;
@@ -501,16 +519,23 @@ footer #social-links img {
   footer #social-links #link {
     justify-content: space-between;
     max-width: 100px;
+    min-width: 100px;
     padding: 10px;
   }
   footer #social-links {
     flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+  }
+  footer #social-links img {
+    margin-left: 10px;
   }
 
   footer #social {
     border-top: solid thin rgba(230, 236, 242, 0.2);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   #modal img {
@@ -518,5 +543,34 @@ footer #social-links img {
   }
   #modal #close-icon {
     left: 260px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .landing-page-container {
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .landing-page-container #details {
+    max-width: 750px;
+    text-align: center;
+  }
+  .landing-page-container #details #neon-logo {
+    align-self: center;
+  }
+  .landing-page-container #screen-shot {
+    background-size: contain;
+    background-image: url("./images/screenshot.png");
+    /*max-height: 300px;*/
+    /*width: 100%;*/
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    background-position: calc(50%) 50%;
+    display: flex;
+    flex: 1;
+  }
+  .landing-page-container #screen-shot-container {
+    display: none;
+    min-width: 250px;
   }
 }

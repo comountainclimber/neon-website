@@ -12,7 +12,7 @@ const LandingPage = () => (
         <img id="neon-logo" src={logo} />
         <div id="description">
           An open source <span id="gold"> cross-platform light wallet</span>
-          for the NEO blockchain available on Mac OSX, Windows and Linux.
+          for the NEO blockchain available on Windows, Mac OS, and Linux.
         </div>
         <DownloadOptions options={downloadOptions} />
       </div>
