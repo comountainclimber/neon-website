@@ -1,17 +1,17 @@
 import React from "react";
 import DownloadOptions from "./DownloadOptions";
 import { downloadOptions } from "../../config.js";
+import logo from "../../images/logo.svg";
 import screenshot from "../../images/screenshot.png";
-import coz from "../../images/coz.svg";
+// import coz from "../../images/coz.svg";
 
 const LandingPage = () => (
   <div className="landing-page-container">
-    <Navigation />
     <div id="details-container">
       <div id="details">
-        <h1>NEON</h1>
+        <img id="neon-logo" src={logo} />
         <div id="description">
-          An open source <p id="gold"> cross-platform light wallet</p>
+          An open source <span id="gold"> cross-platform light wallet</span>
           for the NEO blockchain available on Mac OSX, Windows and Linux.
         </div>
         <DownloadOptions options={downloadOptions} />
@@ -23,12 +23,13 @@ const LandingPage = () => (
   </div>
 );
 
-const Navigation = () => (
-  <nav>
-    <a href="https://cityofzion.io/">
-      <img src={coz} />
-    </a>
-  </nav>
-);
+// NOT IN USE
+// const Navigation = () => (
+//   <nav>
+//     <a href="https://cityofzion.io/">
+//       <img src={coz} />
+//     </a>
+//   </nav>
+// );
 
 export default LandingPage;

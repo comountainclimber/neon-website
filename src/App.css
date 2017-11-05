@@ -20,9 +20,17 @@ html {
   text-align: center;
 }
 
+#modal #close-icon {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  left: 280px;
+}
+
 #modal #qr-label {
   background-color: #4597ff;
-  height: 60px;
+  padding-bottom: 20px;
+  padding-top: 35px;
   font-family: "Source Sans Pro", sans-serif;
   color: white;
   font-weight: lighter;
@@ -33,7 +41,7 @@ html {
   justify-content: center;
   padding-left: 20px;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 #modal #down-arrow {
   width: 0;
@@ -42,6 +50,10 @@ html {
   border-left: 125px solid transparent;
   border-right: 125px solid transparent;
   border-top: 30px solid #4597ff;
+}
+
+#modal img {
+  width: 275px;
 }
 
 .landing-page-container {
@@ -78,15 +90,25 @@ html {
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 40px;
   justify-content: center;
   flex-direction: column;
   flex: 0.8;
 }
 
+#details #neon-logo {
+  width: 100%;
+}
+
 .landing-page-container #gold {
-  display: inline-flex;
+  font-weight: 900;
+  display: inline;
   margin: 0;
   color: #ffd84a;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 400;
 }
 
 #gold::after {
@@ -98,7 +120,7 @@ html {
   letter-spacing: 1px;
   margin: 0;
   font-size: 25px;
-  font-weight: 100;
+  font-weight: 300;
   color: white;
 }
 
@@ -141,9 +163,9 @@ html {
   border: solid thin #4492fd;
   border-radius: 3px;
   color: white;
-  background-color: rgba(49, 50, 99, 0);
+  background-color: #313164;
   height: 40px;
-  width: 200px;
+  width: 175px;
 }
 
 #download-options-container #option {
@@ -151,7 +173,7 @@ html {
 }
 
 #download-options-container img {
-  width: 20px;
+  width: 15px;
 }
 
 #download-options-container #display {
@@ -160,8 +182,9 @@ html {
   font-weight: 200;
 }
 #download-options-container #size {
-  color: white;
+  color: #e6ecf2;
   margin-bottom: 15px;
+  font-size: 13px;
 }
 
 #download-button:hover {
@@ -180,6 +203,7 @@ html {
 }
 
 footer {
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 100;
   color: white;
   font-size: 14px;
@@ -188,6 +212,7 @@ footer {
 }
 
 footer #footer-content {
+  padding: 10px;
   min-height: 100px;
   max-width: 1920px;
   display: flex;
@@ -232,17 +257,17 @@ footer #social #placeholder {
 footer #social #description {
   display: flex;
   flex-direction: row;
+  margin-bottom: 5px;
 }
 
 footer #social-links {
   display: flex;
   flex-direction: row;
-  height: 25px;
 }
 
 footer #social-links #link {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-right: 25px;
 }
 
@@ -250,6 +275,46 @@ footer #social-links img {
   width: 25px;
   margin-left: 5px;
 }
+
+@media (max-width: 1500px) {
+  .landing-page-container #screen-shot-container {
+    background-size: cover;
+    width: 45vw;
+    height: 75vh;
+    background-position: calc(0%) 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #download-button {
+    width: 150px;
+  }
+  #download-options-container #size {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1080px) {
+  footer #donation #address {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 975px) {
+  footer #donation #address {
+    display: none;
+  }
+  .landing-page-container #details {
+    padding-left: 10px;
+  }
+  #download-button {
+    width: 125px;
+  }
+  #download-options-container #size {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .landing-page-container #download-options-container {
     display: none;
@@ -270,12 +335,16 @@ footer #social-links img {
   }
   .landing-page-container #details {
     padding-bottom: 0;
+    padding-left: 20px;
   }
 
   .landing-page-container > #details-container {
     flex: 0.3;
   }
   .landing-page-container #description {
+    font-size: 22px;
+  }
+  .landing-page-container #gold {
     font-size: 22px;
   }
   .landing-page-container h1 {
@@ -304,7 +373,10 @@ footer #social-links img {
   }
   footer #social #description {
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  footer #donation #address {
+    display: flex;
   }
 }
 
@@ -314,6 +386,7 @@ footer #social-links img {
   }
   .landing-page-container #details {
     align-items: center;
+    padding-left: 0px;
     justify-content: center;
   }
   .landing-page-container h1 {
@@ -330,34 +403,17 @@ footer #social-links img {
   .App nav {
     justify-content: center;
   }
-}
-
-@media (max-width: 1200px) {
-  #download-button {
-    width: 150px;
+  footer #social-links #link {
+    padding: 10px;
   }
-  #download-options-container #size {
-    font-size: 12px;
+  footer #social-links {
+    justify-content: center;
+    flex-wrap: wrap;
   }
-}
-
-@media (max-width: 1080px) {
-  footer #donation #address {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .landing-page-container #screen-shot-container {
-    background-size: cover;
-    width: 45vw;
-    height: 75vh;
-    background-position: calc(0%) 50%;
-  }
-}
-
-@media (max-width: 450px) {
   #modal img {
     width: 250px;
+  }
+  #modal #close-icon {
+    left: 260px;
   }
 }

@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import "./App.css";
 
 import cozQr from "./images/coz-qr.png";
+import walletQr from "./images/wallet-qr.png";
 
 class App extends Component {
   state = {
@@ -37,10 +38,7 @@ class App extends Component {
 const QRModal = ({ handleModalClose, modalId }) => (
   <Modal
     isOpen
-    // onAfterOpen={afterOpenFn}
     onRequestClose={handleModalClose}
-    // closeTimeoutMS={n}
-    // style={customStyle}
     contentLabel="Modal"
     style={{
       overlay: {
@@ -57,15 +55,29 @@ const QRModal = ({ handleModalClose, modalId }) => (
         right: "auto",
         top: "auto",
         bottom: "auto",
-        border: "none"
+        border: "none",
+        borderBottom: "#4696ff solid 5px"
       }
     }}
   >
     <div id="modal">
-      <div id="qr-label">Donation to City of Zion</div>
-      <div id="down-arrow" />
-
-      <img src={cozQr} />
+      <div id="close-icon" onClick={handleModalClose}>
+        <i class="fa fa-times-thin fa-2x" aria-hidden="true" />
+      </div>
+      {modalId === "cozQRModal" && (
+        <div>
+          <div id="qr-label">Donate to City of Zion</div>
+          <div id="down-arrow" />
+          <img src={cozQr} />
+        </div>
+      )}
+      {modalId === "neonWallet" && (
+        <div>
+          <div id="qr-label">Donate to NEON Wallet Creators</div>
+          <div id="down-arrow" />
+          <img src={walletQr} />
+        </div>
+      )}
     </div>
   </Modal>
 );
