@@ -64,8 +64,6 @@ html {
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   flex-direction: row;
-  max-width: 1920px;
-  /* background: blue; */
   margin: auto;
 }
 
