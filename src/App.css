@@ -232,6 +232,7 @@ footer #footer-content {
 }
 
 footer #donation {
+  font-size: 17px;
   font-weight: 400;
   color: #ffd84a;
 }
@@ -243,7 +244,7 @@ footer #donation #modal-link {
 }
 
 footer #donation #address {
-  margin-top: 15px;
+  margin-top: 14px;
   color: white;
   font-weight: 200;
   margin-top: 5px;
@@ -251,6 +252,7 @@ footer #donation #address {
 }
 
 footer #social {
+  font-size: 17px;
   font-weight: 400;
   color: #ffd84a;
 }
@@ -308,9 +310,9 @@ footer #social-links img {
 }*/
 
 @media (max-width: 1080px) {
-  footer #donation #address {
+  /*footer #donation #address {
     font-size: 10px;
-  }
+  }*/
 }
 
 /*@media (max-width: 975px) {
@@ -418,6 +420,31 @@ footer #social-links img {
   #download-options-container #size {
     font-size: 10px;
   }*/
+  footer #footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer #donation {
+    padding: 20px;
+    text-align: center;
+  }
+  footer #modal-link {
+    justify-content: center;
+  }
+  footer #placeholder {
+    display: none;
+  }
+  footer #social {
+    padding: 20px;
+  }
+  footer #social #description {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  footer #donation #address {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
@@ -479,31 +506,6 @@ footer #social-links img {
   .landing-page-container {
     flex-direction: column;
   }*/
-  footer #footer-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  footer #donation {
-    padding: 20px;
-    text-align: center;
-  }
-  footer #modal-link {
-    justify-content: center;
-  }
-  footer #placeholder {
-    display: none;
-  }
-  footer #social {
-    padding: 20px;
-  }
-  footer #social #description {
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-  footer #donation #address {
-    display: flex;
-  }
 }
 
 @media (max-width: 450px) {
@@ -536,8 +538,8 @@ footer #social-links img {
   }
   footer #social-links #link {
     justify-content: space-between;
-    max-width: 100px;
-    min-width: 100px;
+    max-width: 110px;
+    min-width: 110px;
     padding: 10px;
   }
   footer #social-links {
