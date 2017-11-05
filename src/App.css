@@ -132,6 +132,7 @@ html {
   flex-wrap: wrap;
   margin-top: 40px;
   margin-bottom: 20px;
+  max-width: 350px;
 }
 
 .landing-page-container #screen-shot-container {
@@ -335,7 +336,16 @@ footer #social-links img {
   }
 }
 
+/*@media (max-width: 1025px) {
+  #landing-page-container #download-options-container {
+    max-width: 350px;
+  }
+}*/
+
 @media (max-width: 1024px) {
+  #details #neon-logo {
+    padding-top: 20px;
+  }
   .landing-page-container #screen-shot {
     background-size: contain;
     background-image: url("./images/screenshot.png");
@@ -383,6 +393,7 @@ footer #social-links img {
     margin-top: 30px;
     margin-bottom: 40px;
     flex-wrap: nowrap;
+    max-width: 100%;
   }
   #download-options-container #option {
     padding: 10px;
@@ -411,12 +422,13 @@ footer #social-links img {
   .landing-page-container #download-options-container {
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 375px;
   }
   #download-options-container #option {
     padding: 5px;
   }
   .landing-page-container #screen-shot {
-    height: 200px;
+    min-height: 200px;
   }
   /*.landing-page-container #screen-shot-container {
     display: none;
@@ -566,6 +578,9 @@ footer #social-links img {
     background-position: calc(50%) 50%;
     display: flex;
     flex: 1;
+  }
+  .landing-page-container #download-options-container {
+    max-width: 100%;
   }
   .landing-page-container #screen-shot-container {
     display: none;
