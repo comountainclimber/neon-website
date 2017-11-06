@@ -5,50 +5,45 @@ import fbIcon from "../../images/facebook.png";
 import slackIcon from "../../images/slack.png";
 import redditIcon from "../../images/reddit.png";
 
+const donationLinks = [
+  {
+    display: "Donate to City of Zion",
+    address: "AXSoNQEKjmqPBNPg5cNrHyWivfjok3Vj9D",
+    modalId: "cozQRModal"
+  },
+  {
+    display: "Donate to NEON wallet creators",
+    address: "Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A",
+    modalId: "neonWallet"
+  }
+];
+
+const Donations = ({ handleModalClick }) =>
+  donationLinks.map(e => (
+    <div key={e.modalId} id="donation">
+      <div id="description">{e.display}</div>
+      <div id="address">{e.address}</div>
+      <div id="modal-link">
+        <a
+          href=""
+          target="blank"
+          onClick={event =>
+            event.preventDefault() || handleModalClick(e.modalId)}
+        >
+          <i className="fa fa-external-link-square" aria-hidden="true" /> Launch
+          QR Code
+        </a>
+      </div>
+    </div>
+  ));
+
 const Footer = ({ handleModalClick }) => (
   <footer>
     <div id="footer-content">
-      <div id="donation">
-        <div id="description">Donate to City of Zion</div>
-        <div id="address">AXSoNQEKjmqPBNPg5cNrHyWivfjok3Vj9D</div>
-        <div id="modal-link">
-          <a
-            href=""
-            target="blank"
-            onClick={e => e.preventDefault() || handleModalClick("cozQRModal")}
-          >
-            <i className="fa fa-external-link-square" aria-hidden="true" />{" "}
-            Launch QR Code
-          </a>
-        </div>
-      </div>
-      <div id="donation">
-        <div id="description">Donate to NEON wallet creators</div>
-        <div id="address">Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A</div>
-        <div id="modal-link">
-          <a
-            href=""
-            target="blank"
-            onClick={e => e.preventDefault() || handleModalClick("neonWallet")}
-          >
-            <i className="fa fa-external-link-square" aria-hidden="true" />{" "}
-            Launch QR Code
-          </a>
-        </div>
-      </div>
+      <Donations handleModalClick={handleModalClick} />
       <div id="social">
         <div id="description">Join us at City of Zion!</div>
-        {/* <div id="placeholder" style={{ opacity: 0 }}>
-          Adr3XjZ5QDzVJrWvzmsTTchpLRRGSzgS5A
-        </div> */}
         <div id="social-links">
-          {/* <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              marginBottom: 10
-            }}
-          > */}
           <a
             href="https://github.com/CityOfZion/neon-wallet"
             id="link"
@@ -63,8 +58,6 @@ const Footer = ({ handleModalClick }) => (
           >
             Facebook <img src={fbIcon} />
           </a>
-          {/* </div> */}
-          {/* <div style={{ display: "flex", flexDirection: "column" }}> */}
           <a
             href="https://join.slack.com/t/neosmarteconomy/shared_invite/MjIyOTc2OTU4NDk3LTE1MDIxNzE2NTctZTE1Mjg5ZWE3Yw"
             id="link"
@@ -75,7 +68,6 @@ const Footer = ({ handleModalClick }) => (
           <a href="https://www.reddit.com/r/NEO/" id="link" target="blank">
             Reddit <img src={redditIcon} />
           </a>
-          {/* </div> */}
         </div>
       </div>
     </div>

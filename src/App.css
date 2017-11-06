@@ -1,5 +1,8 @@
 html {
   background-color: #1e1e3f;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .App nav {
@@ -64,6 +67,8 @@ html {
   height: 95vh;
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   flex-direction: row;
   margin: auto;
 }
@@ -305,34 +310,6 @@ footer #social #description {
   }
 }
 
-/*@media (max-width: 1200px) {
-  #download-button {
-    width: 150px;
-  }
-  #download-options-container #size {
-    font-size: 12px;
-  }
-}*/
-
-@media (max-width: 1080px) {
-  /*footer #donation #address {
-    font-size: 10px;
-  }*/
-}
-
-/*@media (max-width: 975px) {
-  footer #donation #address {
-    display: none;
-  }
-  .landing-page-container #details {
-    padding-left: 10px;
-  }
-  /*#download-button {
-    width: 125px;
-  }
-  #download-options-container #size {
-    font-size: 10px;
-  }*/
 @media (max-width: 1150px) {
   #download-button {
     width: 140px;
@@ -344,12 +321,6 @@ footer #social #description {
     width: 50vw;
   }
 }
-
-/*@media (max-width: 1025px) {
-  #landing-page-container #download-options-container {
-    max-width: 350px;
-  }
-}*/
 
 @media (max-width: 1024px) {
   #details #neon-logo {
@@ -413,18 +384,6 @@ footer #social #description {
   #download-options-container #option {
     padding: 10px;
   }
-  /*footer #donation #address {
-    display: none;
-  }
-  .landing-page-container #details {
-    padding-left: 10px;
-  }*/
-  /*#download-button {
-    width: 125px;
-  }
-  #download-options-container #size {
-    font-size: 10px;
-  }*/
   footer #footer-content {
     flex-direction: column;
     justify-content: center;
@@ -471,53 +430,12 @@ footer #social #description {
   .landing-page-container #screen-shot {
     min-height: 200px;
   }
-  /*.landing-page-container #screen-shot-container {
-    display: none;
-  }*/
-  /*.landing-page-container #screen-shot {
-    background-size: contain;
-    background-image: url("./images/screenshot.png");
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
-    background-position: calc(50%) 50%;
-    display: flex;
-    flex: 1;
-  }*/
-
-  /*.landing-page-container #details-container {
-    padding-bottom: 0;
+  footer #address {
+    font-size: 12px;
   }
-  .landing-page-container #details {
-    padding-bottom: 0;
-    padding-left: 0px;
-    align-items: center;
-    text-align: center;
-    /*margin-bottom: -25px;*/
-  /*}*/
-
-  /*.landing-page-container > #details-container {
-    flex: 0.3;
-  }
-  .landing-page-container #description {
-    font-size: 22px;
-  }
-  .landing-page-container #gold {
-    font-size: 22px;
-  }
-  .landing-page-container h1 {
-    font-size: 75px;
-  }
-  .landing-page-container {
-    flex-direction: column;
-  }*/
 }
 
 @media (max-width: 450px) {
-  /*.landing-page-container > #details-container {
-    padding: 5px;
-  }*/
   .landing-page-container {
     text-align: center;
   }
@@ -537,16 +455,11 @@ footer #social #description {
   .landing-page-container #download-options-container {
     justify-content: space-around;
     margin-top: 20px;
-    /*justify-content: center;*/
     flex-direction: row;
     flex-wrap: wrap;
-
-    /*flex-flow: column;*/
   }
   #download-options-container #size {
     font-size: 10px;
-
-    /*flex-flow: column;*/
   }
   .landing-page-container #description {
     font-size: 20px;
@@ -570,22 +483,12 @@ footer #social #description {
   footer #social-links img {
     margin-left: 10px;
   }
-
-  footer #address {
-    font-size: 12px;
-  }
-
-  /*footer #social #description {
-    font-size: 17px;
-  }*/
-
   footer #social {
     border-top: solid thin rgba(230, 236, 242, 0.2);
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-
   #modal img {
     width: 250px;
   }
@@ -609,8 +512,6 @@ footer #social #description {
   .landing-page-container #screen-shot {
     background-size: contain;
     background-image: url("./images/screenshot.png");
-    /*max-height: 300px;*/
-    /*width: 100%;*/
     background-repeat: no-repeat;
     display: -ms-flexbox;
     background-position: calc(50%) 50%;
