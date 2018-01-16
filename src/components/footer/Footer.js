@@ -28,7 +28,8 @@ const Donations = ({ handleModalClick }) =>
           href=""
           target="blank"
           onClick={event =>
-            event.preventDefault() || handleModalClick(e.modalId)}
+            event.preventDefault() || handleModalClick(e.modalId)
+          }
         >
           <i className="fa fa-external-link-square" aria-hidden="true" /> Launch
           QR Code
@@ -58,12 +59,8 @@ const Footer = ({ handleModalClick }) => (
           >
             Facebook <img src={fbIcon} />
           </a>
-          <a
-            href="https://join.slack.com/t/neosmarteconomy/shared_invite/MjIyOTc2OTU4NDk3LTE1MDIxNzE2NTctZTE1Mjg5ZWE3Yw"
-            id="link"
-            target="blank"
-          >
-            Slack <img src={slackIcon} />
+          <a href="https://discord.gg/R8v48YA" id="link" target="blank">
+            Discord <img src={slackIcon} />
           </a>
           <a href="https://www.reddit.com/r/NEO/" id="link" target="blank">
             Reddit <img src={redditIcon} />
