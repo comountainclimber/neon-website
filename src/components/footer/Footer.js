@@ -2,7 +2,7 @@ import React from "react";
 
 import githubIcon from "../../images/github.png";
 import fbIcon from "../../images/facebook.png";
-import slackIcon from "../../images/slack.png";
+import discordIcon from "../../images/discord.png";
 import redditIcon from "../../images/reddit.png";
 
 const donationLinks = [
@@ -60,7 +60,7 @@ const Footer = ({ handleModalClick }) => (
             Facebook <img src={fbIcon} />
           </a>
           <a href="https://discord.gg/R8v48YA" id="link" target="blank">
-            Discord <img src={slackIcon} />
+            Discord <img src={discordIcon} />
           </a>
           <a href="https://www.reddit.com/r/NEO/" id="link" target="blank">
             Reddit <img src={redditIcon} />
