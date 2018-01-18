@@ -7,7 +7,7 @@ export const downloadOptions = [
     id: "WINDOWS",
     display: "Windows",
     href:
-      "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.7/Neon.Setup.0.0.7.Windows.exe",
+      "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.0/Neon.Setup.0.1.0.Windows.exe",
     icon: windowsIcon,
     size: "134.56mb (Neon.exe)"
   },
@@ -15,7 +15,7 @@ export const downloadOptions = [
     id: "MAC_OS",
     display: "Mac OS",
     href:
-      "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.7/Neon-0.0.7.Mac.dmg",
+      "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.0/Neon-0.1.0.Mac.dmg",
     icon: appleIcon,
     size: "134.56mb (Neon.dmg)"
   },
@@ -23,7 +23,7 @@ export const downloadOptions = [
     id: "LINUX",
     display: "Linux",
     href:
-      "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.7/Neon-0.0.7_amd64.Linux.deb",
+      "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.0/Neon_0.1.0_amd64.Linux.deb",
     icon: linuxIcon,
     size: "134.56mb (Neon.deb)"
   },
@@ -31,7 +31,7 @@ export const downloadOptions = [
     id: "LINUX2",
     display: "Linux",
     href:
-      "https://github.com/CityOfZion/neon-wallet/releases/download/0.0.7/Neon-0.0.7-x86_64.Linux.AppImage",
+      "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.0/Neon-0.1.0-x86_64.Linux.AppImage",
     icon: linuxIcon,
     size: "134.56mb (Neon.appimage)"
   }
