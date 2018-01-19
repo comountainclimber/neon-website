@@ -1,14 +1,58 @@
 import React, { Component } from "react";
+import rp from "request-promise";
 import LandingPage from "./components/landing-page/LandingPage";
 import Footer from "./components/footer/Footer";
 import QrModal from "./components/modal/QrModal";
+import { downloadOptions } from "./config";
 
 import "./App.css";
 
 class App extends Component {
   state = {
-    modalId: null
+    modalId: null,
+    downloadOptions: downloadOptions
   };
+
+  componentDidMount() {
+    // NOTE: If this request fails the default downloadOptions from config.js will be leveraged.
+    rp("https://api.github.com/repos/CityOfZion/neon-wallet/releases/latest")
+      .then(response => {
+        const parsed = JSON.parse(response);
+        const updated = [];
+        downloadOptions.forEach(option => {
+          switch (option.id) {
+            case "WINDOWS":
+              option.href = parsed.assets.find(
+                asset => asset.name.split(".").lastIndexOf("exe") > 0
+              ).browser_download_url;
+              break;
+            case "MAC_OS":
+              option.href = parsed.assets.find(
+                asset => asset.name.split(".").lastIndexOf("dmg") > 0
+              ).browser_download_url;
+              break;
+            case "LINUX_DEB":
+              option.href = parsed.assets.find(
+                asset => asset.name.split(".").lastIndexOf("deb") > 0
+              ).browser_download_url;
+              break;
+            case "LINUX_APPIMAGE":
+              option.href = parsed.assets.find(
+                asset => asset.name.split(".").lastIndexOf("AppImage") > 0
+              ).browser_download_url;
+              break;
+          }
+          updated.push(option);
+        });
+        this.setState({ downloadOptions: updated });
+      })
+      .catch(err => {
+        console.error(
+          "Request to https://api.github.com/repos/CityOfZion/neon-wallet/releases/latest failed!",
+          err
+        );
+      });
+  }
 
   render() {
     return (
@@ -22,7 +66,7 @@ class App extends Component {
             }}
           />
         )}
-        <LandingPage />
+        <LandingPage downloadOptions={this.state.downloadOptions} />
         <Footer handleModalClick={id => this.setState({ modalId: id })} />
       </div>
     );

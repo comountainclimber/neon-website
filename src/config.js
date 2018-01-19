@@ -20,7 +20,7 @@ export const downloadOptions = [
     size: "134.56mb (Neon.dmg)"
   },
   {
-    id: "LINUX",
+    id: "LINUX_DEB",
     display: "Linux",
     href:
       "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.1/Neon_0.1.1_amd64.Linux.deb",
@@ -28,7 +28,7 @@ export const downloadOptions = [
     size: "134.56mb (Neon.deb)"
   },
   {
-    id: "LINUX2",
+    id: "LINUX_APPIMAGE",
     display: "Linux",
     href:
       "https://github.com/CityOfZion/neon-wallet/releases/download/0.1.1/Neon-0.1.1-x86_64.Linux.AppImage",

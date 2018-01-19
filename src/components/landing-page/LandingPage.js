@@ -5,7 +5,7 @@ import logo from "../../images/NEON-logo.svg";
 import screenshot from "../../images/screenshot.png";
 // import coz from "../../images/coz.svg";
 
-const LandingPage = () => (
+const LandingPage = props => (
   <div className="landing-page-container">
     <div id="details-container">
       <div id="details">
@@ -14,7 +14,7 @@ const LandingPage = () => (
           An open source <span id="gold"> cross-platform light wallet</span>
           for the NEO blockchain available on Windows, Mac OS, and Linux.
         </div>
-        <DownloadOptions options={downloadOptions} />
+        <DownloadOptions options={props.downloadOptions} />
       </div>
     </div>
     <div id="screen-shot">
