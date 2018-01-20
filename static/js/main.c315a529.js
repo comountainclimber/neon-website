@@ -71274,7 +71274,7 @@ var LandingPage = function LandingPage(props) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "a",
           { href: props.latestReleaseUrl, target: "blank" },
-          "Latest release info and checksum hashes."
+          "Latest release information and checksum hashes."
         )
       )
     ),
@@ -72710,4 +72710,4 @@ function unregister() {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.a550e265.js.map
+//# sourceMappingURL=main.c315a529.js.map
