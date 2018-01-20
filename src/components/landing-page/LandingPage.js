@@ -16,7 +16,7 @@ const LandingPage = props => (
         </div>
         <DownloadOptions options={props.downloadOptions} />
         <a href={props.latestReleaseUrl} target="blank">
-          Latest release info and checksum hashes.
+          Latest release information and checksum hashes.
         </a>
       </div>
     </div>
