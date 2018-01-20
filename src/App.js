@@ -42,6 +42,7 @@ class App extends Component {
               ).browser_download_url;
               break;
           }
+          option.name = parsed.name;
           updated.push(option);
         });
         this.setState({ downloadOptions: updated });
