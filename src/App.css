@@ -1,5 +1,5 @@
 html {
-  background-color: #1e1e3f;
+  background-color: #12102e;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -64,7 +64,7 @@ html {
   min-height: 600px;
   display: flex;
   background-image: url("./images/Background.png");
-  height: 95vh;
+  height: 85vh;
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;

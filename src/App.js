@@ -48,7 +48,7 @@ class App extends Component {
         });
         this.setState({
           downloadOptions: updated,
-          latestRelease: response.html_url
+          latestReleaseUrl: parsed.html_url
         });
       })
       .catch(err => {
