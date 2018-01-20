@@ -15,6 +15,9 @@ const LandingPage = props => (
           for the NEO blockchain available on Windows, Mac OS, and Linux.
         </div>
         <DownloadOptions options={props.downloadOptions} />
+        <a href={props.latestReleaseUrl} target="blank">
+          Latest release info and checksum hashes.
+        </a>
       </div>
     </div>
     <div id="screen-shot">

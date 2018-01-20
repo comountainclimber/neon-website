@@ -36,3 +36,6 @@ export const downloadOptions = [
     size: "134.56mb (Neon.appimage)"
   }
 ];
+
+export const latestRelease =
+  "https://github.com/CityOfZion/neon-wallet/releases/tag/0.1.1";

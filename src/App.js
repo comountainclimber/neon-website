@@ -3,14 +3,15 @@ import rp from "request-promise";
 import LandingPage from "./components/landing-page/LandingPage";
 import Footer from "./components/footer/Footer";
 import QrModal from "./components/modal/QrModal";
-import { downloadOptions } from "./config";
+import { downloadOptions, latestRelease } from "./config";
 
 import "./App.css";
 
 class App extends Component {
   state = {
     modalId: null,
-    downloadOptions: downloadOptions
+    downloadOptions: downloadOptions,
+    latestReleaseUrl: latestRelease
   };
 
   componentDidMount() {
@@ -45,7 +46,10 @@ class App extends Component {
           option.name = parsed.name;
           updated.push(option);
         });
-        this.setState({ downloadOptions: updated });
+        this.setState({
+          downloadOptions: updated,
+          latestRelease: response.html_url
+        });
       })
       .catch(err => {
         console.error(
@@ -67,7 +71,7 @@ class App extends Component {
             }}
           />
         )}
-        <LandingPage downloadOptions={this.state.downloadOptions} />
+        <LandingPage {...this.state} />
         <Footer handleModalClick={id => this.setState({ modalId: id })} />
       </div>
     );
